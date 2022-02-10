@@ -1,0 +1,15 @@
+MD5 hash of Part1.mp4:
+5e9d985f06e3f17dfc191299cf528a45
+CertUtil: -hashfile command completed successfully.
+
+MD5 hash of Part2.mp4:
+1cc382d307a2eaefcd30f3aeaf9241a3
+CertUtil: -hashfile command completed successfully.
+
+MD5 hash of Part3.mp4:
+b2c9e15961e88baab44e40f0b7f532bb
+CertUtil: -hashfile command completed successfully.
+
+MD5 hash of Part4.mp4:
+6f48c3443898a3bb37e128d428fcce1a
+CertUtil: -hashfile command completed successfully.

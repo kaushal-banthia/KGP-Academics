@@ -1,0 +1,220 @@
+Name: Kaushal Banthia
+Roll Number: 19CS10039
+
+This program contains the following classes
+
+1. Class Station
+    Data Members:
+        Private:
+            -> string name_: const
+    Functions:
+        Public:
+            -> GetName(): const
+            -> GetDistance(): const
+
+2. Class Railways
+*This is a Singleton Class*
+    Data Members:
+        Private:
+            -> vector<string> sStations: static const
+            -> map<vector<string>, int> sDistStations: static
+    Functions:
+        Public:
+            -> IndianRailways(): A static function that can declare the single object of the Class using
+                        its Constructor. Using this function to instantiate the class ensures that it 
+                        remains Singleton.
+            -> GetDistance(): const
+
+3. Class Date
+    Data Members:
+        Private:
+            -> vector<string> sMonthName: static const
+            -> int d_: const
+            -> int m_: const
+            -> int y_: const
+            -> string date_: const
+    Functions:
+        Public:
+            -> GetDay(): const
+            -> GetMonth(): const
+            -> GetYear(): const
+
+4. Class Passenger
+    Data Members:
+        Protected:
+            -> string name_: const
+            -> long long aadharNumber_: const
+            -> Date dateOfBirth_: const
+            -> string gender_: const
+            -> long long mobileNumber_: const
+            -> string category_: const
+    Functions:
+        Public:
+            -> GetName(): const
+            -> GetAadharNumber(): const
+            -> GetDate(): const
+            -> GetGender(): const
+            -> GetMobileNumber(): const
+            -> GetCategory(): Pure virtual and const
+
+5. Class BookingClasses
+*This is an Abstract Base Class*
+    Data Members:
+        Protected:
+            ->string name_: const
+    Functions:
+        Public:
+            -> IsSitting(): const
+            -> IsLuxury(): const
+            -> GetNumberOfTiers(): Pure virtual and const
+            -> GetLoadFactor(): Pure virtual and const
+            -> GetName(): const
+            -> GetReservationCharge: Pure virtual and const
+            -> GetTatkalLoadFactor: Pure virtual and const
+            -> GetMinimumTatkalCharge: Pure virtual and const
+            -> GetMaximumTatkalCharge: Pure virtual and const
+            -> GetMinimumTatkalDistance: Pure virtual and const
+            -> IsAC(): Pure virtual and const
+
+Sub Types of BookingClasses:
+*These are Singleton Classes*
+-> ACFirstClassType for the subtype ACFirstClass
+-> ExecutiveChairCarType for the subtype ExecutiveChairCar
+-> AC2TierType for the subtype AC2Tier
+-> FirstClassType for the subtype FirstClass
+-> AC3TierType for the subtype AC3Tier
+-> SleeperType for the subtype Sleeper
+-> SecondSittingType for the subtype SecondSitting
+
+    Data Members:
+        Protected:
+            -> string sName: static const
+            -> bool sIsAC: static const
+            -> bool sIsLuxury: static const
+            -> bool sSitting: static const
+            -> double sLoadFactor: static const
+            -> double sTatkalLoadFactor: static const
+            -> double sMinimumTatkalCharge: static const
+            -> double sMaximumTatkalCharge: static const
+            -> int sMinimumTatkalDistance: static const
+            -> int sNumberOfTiers: static const
+            -> double sReservationCharge: static const
+
+    Functions:
+        Public:
+            -> Type(): A static function that can declare the single object of the Class using
+                        its Constructor. Using this function to instantiate the class ensures that it 
+                        remains Singleton.
+            -> The pure virtual functions from the Abstract Base Class
+
+
+6. class Divyaang
+*This is an Abstract Base Class*
+    Data Members:
+        Protected:
+            ->string name_: const
+    Functions:
+        Public:
+            -> GetName(): const
+            -> GetConcessionFactor(): Pure virtual and const
+
+Sub Types of Divyaang:
+*These are Singleton Classes*
+-> BlindType for the subtype Blind
+-> CancerPatientType for the subtype CancerPatient
+-> TBPatientType for the subtype TBPatient
+-> OrthopaedicallyHandicappedType for the subtype OrthopaedicallyHandicapped
+
+    Data Members:
+        Protected:
+            -> string sName: static const
+            -> double sACFirstClassConcession: static const
+            -> double sExecutiveChairCarConcession: static const
+            -> double sAC2TierConcession: static const
+            -> double sFirstClassConcession: static const
+            -> double sAC3TierConcession: static const
+            -> double sACChairCarConcession: static const
+            -> double sSleeperConcession: static const
+            -> double sSecondSittingConcession: static const
+
+    Functions:
+        Public:
+            -> Type(): A static function that can declare the single object of the Class using
+                        its Constructor. Using this function to instantiate the class ensures that it 
+                        remains Singleton.
+            -> The pure virtual functions from the Abstract Base Class
+
+7. class BookingCategory
+*This is an Abstract Base Class*
+    Data Members:
+        Protected:
+            ->string name_: const
+    Functions:
+        Public:
+            -> GetName(): const
+            -> CheckEligibility(): Pure virtual and const
+            -> MakeReservation(): Pure virtual and const
+
+Sub Types of BookingCategory:
+*These are Singleton Classes*
+-> GeneralType for the subtype General
+-> LadiesType for the subtype Ladies
+-> SeniorCitizenType for the subtype SeniorCitizen
+-> DivyaangType for the subtype Divyaang
+-> TatkalType for the subtype Tatkal
+-> PremiumTatkalType for the subtype PremiumTatkal
+
+    Data Members:
+        Protected:
+            -> string sName: static const
+
+    Functions:
+        Public:
+            -> Type(): A static function that can declare the single object of the Class using
+                        its Constructor. Using this function to instantiate the class ensures that it 
+                        remains Singleton.
+            -> The pure virtual functions from the Abstract Base Class
+
+8. class Booking
+*This is an Abstract Base Class*
+    Data Members:
+        Protected:
+            -> vector<Booking*> sBookings: static
+            -> double sBaseFarePerKM: static const
+            -> int sBookingPNRSerial: static
+            -> int PNR_: const
+            -> Station fromStation_: const
+            -> Station toStation_: const
+            -> Date dateOfBooking_: const
+            -> Date dateOfReservation_: const
+            -> BookingClasses bookingClass_: const
+            -> BookingCategory bookingCategory_: const
+            -> int fare_
+            -> string bookingMessage_
+            -> bool bookingStatus_
+            -> Passenger passenger_: const
+    Functions:
+        Public:
+            -> MakeReservation(): static
+            -> PrintBookings(): static
+            -> ComputeFare(): Pure virtual
+
+Sub Types of Booking:
+*These are Singleton Classes*
+-> GeneralBookingType for the subtype GeneralBooking
+-> LadiesBookingType for the subtype LadiesBooking
+-> SeniorCitizenBookingType for the subtype SeniorCitizenBooking
+-> DivyaangBookingType for the subtype DivyaangBooking
+-> TatkalBookingType for the subtype TatkalBooking
+-> PremiumTatkalBookingType for the subtype PremiumTatkalBooking
+
+    Data Members:
+        Protected:
+            -> string sName: static const
+
+    Functions:
+        Public:
+            -> Type(): A static function that can declare the single object of the Class using
+                        its Constructor. Using this function to instantiate the class ensures that it 
+                        remains Singleton.
+            -> The pure virtual functions from the Abstract Base Class

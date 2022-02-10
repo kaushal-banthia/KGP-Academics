@@ -1,0 +1,151 @@
+========================================================================================================================
+Symbol Table: Global                                                             Parent: null
+------------------------------------------------------------------------------------------------------------------------
+Name           Type                     Category       Initial Value                 Size        Offset      Nested
+------------------------------------------------------------------------------------------------------------------------
+printStr       integer                  function                                     4           0           printStr
+readInt        integer                  function                                     4           4           readInt
+printInt       integer                  function                                     4           8           printInt
+factorial      integer                  function                                     4           12          factorial
+main           integer                  function                                     4           16          main
+------------------------------------------------------------------------------------------------------------------------
+
+========================================================================================================================
+Symbol Table: printStr                                                           Parent: Global
+------------------------------------------------------------------------------------------------------------------------
+Name           Type                     Category       Initial Value                 Size        Offset      Nested
+------------------------------------------------------------------------------------------------------------------------
+c              ptr(char)                param                                        4           0           null
+return         integer                  local                                        4           4           null
+------------------------------------------------------------------------------------------------------------------------
+
+========================================================================================================================
+Symbol Table: readInt                                                            Parent: Global
+------------------------------------------------------------------------------------------------------------------------
+Name           Type                     Category       Initial Value                 Size        Offset      Nested
+------------------------------------------------------------------------------------------------------------------------
+ep             ptr(integer)             param                                        4           0           null
+return         integer                  local                                        4           4           null
+------------------------------------------------------------------------------------------------------------------------
+
+========================================================================================================================
+Symbol Table: printInt                                                           Parent: Global
+------------------------------------------------------------------------------------------------------------------------
+Name           Type                     Category       Initial Value                 Size        Offset      Nested
+------------------------------------------------------------------------------------------------------------------------
+i              integer                  param                                        4           0           null
+return         integer                  local                                        4           4           null
+------------------------------------------------------------------------------------------------------------------------
+
+========================================================================================================================
+Symbol Table: factorial                                                          Parent: Global
+------------------------------------------------------------------------------------------------------------------------
+Name           Type                     Category       Initial Value                 Size        Offset      Nested
+------------------------------------------------------------------------------------------------------------------------
+a              integer                  param                                        4           0           null
+return         integer                  local                                        4           4           null
+ans            integer                  local                                        4           8           null
+t00            integer                  temp           1                             4           12          null
+t01            integer                  temp           0                             4           16          null
+t02            integer                  temp           1                             4           20          null
+t03            integer                  temp                                         4           24          null
+t04            integer                  temp                                         4           28          null
+t05            integer                  temp           1                             4           32          null
+t06            integer                  temp                                         4           36          null
+factorial      integer                  local                                        4           40          null
+t07            integer                  temp           1                             4           44          null
+t08            integer                  temp                                         4           48          null
+t09            integer                  temp                                         4           52          null
+t10            integer                  temp                                         4           56          null
+t11            integer                  temp                                         4           60          null
+------------------------------------------------------------------------------------------------------------------------
+
+========================================================================================================================
+Symbol Table: main                                                               Parent: Global
+------------------------------------------------------------------------------------------------------------------------
+Name           Type                     Category       Initial Value                 Size        Offset      Nested
+------------------------------------------------------------------------------------------------------------------------
+return         integer                  local                                        4           0           null
+a              integer                  local                                        4           4           null
+b              arr(50, integer)         local                                        200         8           null
+t00            integer                  temp           50                            4           208         null
+c              ptr(integer)             local                                        4           212         null
+p              integer                  local                                        4           216         null
+res            integer                  local                                        4           220         null
+printStr       integer                  local                                        4           224         null
+t01            ptr(char)                temp           "\n\n\n**** Factorial of a numbers ****\n"4           228         null
+t02            integer                  temp                                         4           232         null
+t03            ptr(char)                temp           "Enter the number : "         4           236         null
+t04            integer                  temp                                         4           240         null
+readInt        integer                  local                                        4           244         null
+t05            ptr(integer)             temp                                         4           248         null
+t06            integer                  temp                                         4           252         null
+t07            integer                  temp                                         4           256         null
+t08            ptr(char)                temp           "The value of n! is: "        4           260         null
+t09            integer                  temp                                         4           264         null
+factorial      integer                  local                                        4           268         null
+t10            integer                  temp                                         4           272         null
+t11            integer                  temp                                         4           276         null
+printInt       integer                  local                                        4           280         null
+t12            integer                  temp                                         4           284         null
+t13            ptr(char)                temp           "\n"                          4           288         null
+t14            integer                  temp                                         4           292         null
+t15            integer                  temp           0                             4           296         null
+------------------------------------------------------------------------------------------------------------------------
+
+==============================
+Quad Translation
+------------------------------
+
+factorial: 
+
+	1   :	t00 = 1
+	2   :	if a <= t00 goto 5
+	3   :	goto 16
+	4   :	goto 22
+	5   :	t01 = 0
+	6   :	if a<t01 goto 9
+	7   :	goto 13
+	8   :	goto 15
+	9   :	t02 = 1
+	10  :	t03 = -t02
+	11  :	ans = t03
+	12  :	goto 22
+	13  :	t05 = 1
+	14  :	ans = t05
+	15  :	goto 22
+	16  :	t07 = 1
+	17  :	t08 = a - t07
+	18  :	param t08
+	19  :	t09 = call factorial, 1
+	20  :	t10 = a *t09
+	21  :	ans = t10
+	22  :	ret ans
+
+main: 
+
+	25  :	t00 = 50
+	26  :	op
+	27  :	param t01
+	28  :	t02 = call printStr, 1
+	29  :	op
+	30  :	param t03
+	31  :	t04 = call printStr, 1
+	32  :	t05 = &p
+	33  :	param t05
+	34  :	t06 = call readInt, 1
+	35  :	a = t06
+	36  :	op
+	37  :	param t08
+	38  :	t09 = call printStr, 1
+	39  :	param a
+	40  :	t10 = call factorial, 1
+	41  :	res = t10
+	42  :	param res
+	43  :	t12 = call printInt, 1
+	44  :	op
+	45  :	param t13
+	46  :	t14 = call printStr, 1
+	47  :	t15 = 0
+	48  :	ret t15
+------------------------------

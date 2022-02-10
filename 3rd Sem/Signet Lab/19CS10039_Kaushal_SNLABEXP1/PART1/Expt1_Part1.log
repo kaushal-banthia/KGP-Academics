@@ -1,0 +1,21 @@
+Circuit: * C:\Users\banth\Desktop\3rd Sem Subjects\Signet Lab\19CS10039_Kaushal_SNLABEXP1\PART1\Expt1_Part1.asc
+
+.OP point found by inspection.
+
+Date: Sat Oct 10 21:44:12 2020
+Total elapsed time: 0.423 seconds.
+
+tnom = 27
+temp = 27
+method = modified trap
+totiter = 80308
+traniter = 80308
+tranpoints = 40155
+accept = 28053
+rejected = 12102
+matrix size = 9
+fillins = 3
+solver = Normal
+Matrix Compiler1: 606 bytes object code size  0.4/0.3/[0.2]
+Matrix Compiler2: 735 bytes object code size  0.3/0.4/[0.2]
+

@@ -1,0 +1,90 @@
+========================================================================================================================
+Symbol Table: Global                                                             Parent: null
+------------------------------------------------------------------------------------------------------------------------
+Name           Type                     Category       Initial Value                 Size        Offset      Nested
+------------------------------------------------------------------------------------------------------------------------
+x              integer                  local          10                            4           0           null
+t00            integer                  temp           10                            4           4           null
+q              integer                  local                                        4           8           null
+c              char                     local                                        1           12          null
+arr1           arr(10, integer)         local                                        40          13          null
+t01            integer                  temp           10                            4           53          null
+arr2           arr(5, arr(10, integer)) local                                        200         57          null
+t02            integer                  temp           5                             4           257         null
+t03            integer                  temp           10                            4           261         null
+ptr            ptr(integer)             local                                        4           265         null
+division       void                     function                                     0           269         division
+main           void                     function                                     0           269         main
+------------------------------------------------------------------------------------------------------------------------
+
+========================================================================================================================
+Symbol Table: division                                                           Parent: Global
+------------------------------------------------------------------------------------------------------------------------
+Name           Type                     Category       Initial Value                 Size        Offset      Nested
+------------------------------------------------------------------------------------------------------------------------
+i              integer                  param                                        4           0           null
+d              integer                  param                                        4           4           null
+------------------------------------------------------------------------------------------------------------------------
+
+========================================================================================================================
+Symbol Table: main                                                               Parent: Global
+------------------------------------------------------------------------------------------------------------------------
+Name           Type                     Category       Initial Value                 Size        Offset      Nested
+------------------------------------------------------------------------------------------------------------------------
+a              integer                  local          120                           4           0           null
+t00            integer                  temp           120                           4           4           null
+b              integer                  local          17                            4           8           null
+t01            integer                  temp           17                            4           12          null
+r1             integer                  local                                        4           16          null
+r2             integer                  local                                        4           20          null
+r3             integer                  local                                        4           24          null
+r4             integer                  local                                        4           28          null
+r5             integer                  local                                        4           32          null
+r6             integer                  local                                        4           36          null
+r7             integer                  local                                        4           40          null
+ch             char                     local          'c'                           1           44          null
+t02            char                     temp           'c'                           1           45          null
+d              char                     local          'a'                           1           46          null
+t03            char                     temp           'a'                           1           47          null
+x              integer                  local                                        4           48          null
+t04            integer                  temp                                         4           52          null
+t05            integer                  temp                                         4           56          null
+t06            integer                  temp                                         4           60          null
+t07            integer                  temp                                         4           64          null
+t08            integer                  temp                                         4           68          null
+t09            integer                  temp                                         4           72          null
+t10            integer                  temp                                         4           76          null
+t11            integer                  temp                                         4           80          null
+t12            integer                  temp           0                             4           84          null
+------------------------------------------------------------------------------------------------------------------------
+
+==============================
+Quad Translation
+------------------------------
+	0   :	t00 = 10
+	1   :	x = t00
+	2   :	t01 = 10
+	3   :	t02 = 5
+	4   :	t03 = 10
+
+main: 
+
+	6   :	t00 = 120
+	7   :	a = t00
+	8   :	t01 = 17
+	9   :	b = t01
+	10  :	op
+	11  :	ch = t02
+	12  :	op
+	13  :	d = t03
+	14  :	t04 = x + b
+	15  :	r1 = t04
+	16  :	t06 = x - b
+	17  :	r2 = t06
+	18  :	t08 = x *b
+	19  :	r3 = t08
+	20  :	t10 = x / b
+	21  :	r4 = t10
+	22  :	t12 = 0
+	23  :	ret t12
+------------------------------

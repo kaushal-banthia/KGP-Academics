@@ -1,0 +1,10 @@
+->hi [Sender: User_1]
+User_4
+->hue hue hue [Sender: User_1]
+User_2
+->hue hue hue [Sender: User_1, Group: Group_1]
+User_2
+->hue hue hue [Sender: User_1, Group: Group_1]
+User_3
+->hue hue hue [Sender: User_1, Group: Group_1]
+User_4

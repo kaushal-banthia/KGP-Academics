@@ -1,0 +1,329 @@
+Name: Kaushal Banthia
+Roll Number: 19CS10039
+
+Unit Testing (uses UnitTest.cpp)
+1. class Station
+    -> Check the Construction of the Station Object
+        [Golden Output]
+        Mumbai
+        Delhi
+    -> Check the function GetName of the Station Class
+        [Golden Output]
+        Mumbai
+    -> Check the function GetDistance of the Station Class
+        [Golden Output]
+        1447
+    -> Check the output streaming operator which is a friend function of the Station Class
+        [Expected Output]
+        Mumbai
+
+2. class Railways
+    -> Check that the Railways Class is a Singleton Class
+    -> Check the function GetDistance of the Railways Class
+        [Golden Output]
+        1447
+    -> Check the output streaming operator which is a friend function of the Railways Class
+        [Expected Output]
+        List of Stations:
+        Mumbai
+        Delhi
+        Bangalore
+        Kolkata
+        Chennai
+
+        Distance Between 2 Stations is listed below:
+        Bangalore, Chennai: 350
+        Bangalore, Delhi: 2150
+        Bangalore, Kolkata: 1871
+        Bangalore, Mumbai: 981
+        Chennai, Delhi: 2180
+        Chennai, Kolkata: 1659
+        Chennai, Mumbai: 1338
+        Delhi, Kolkata: 1472
+        Delhi, Mumbai: 1447
+        Kolkata, Mumbai: 2014
+
+3. class Date
+    -> Check the Construction of the Date Object
+        [Golden Output]
+        1
+        2
+        2012
+    -> Check the output streaming operator which is a friend function of the Date Class
+        [Expected Output]
+        1/Feb/2012
+
+4. class ACChairCar
+    -> Check the Construction of the ACChairCar Object
+        [Golden Output]
+        AC Chair Car
+        true
+        false
+        1.25
+    -> Check that the ACChairCar Class is a Singleton Class
+    -> Check the output streaming operator which is a friend function of the ACChairCar Class
+        [Expected Output]
+        AC Chair Car
+        Fare Load Factor: 1.25
+        Seat / Berth: Seat
+        AC: Yes
+        # of Tiers: 0
+        Luxury / Ordinary: Ordinary
+
+5. class SecondSitting
+    -> Check the Construction of the SecondSitting Object
+        [Golden Output]
+        Second Sitting
+        false
+        false
+        0.5
+    -> Check that the SecondSitting Class is a Singleton Class
+    -> Check the output streaming operator which is a friend function of the SecondSitting Class
+        [Expected Output]
+        Second Sitting
+        Fare Load Factor: 0.5
+        Seat / Berth: Seat
+        AC: No
+        # of Tiers: 0
+        Luxury / Ordinary: Ordinary
+
+6. class ACFirstClass
+    -> Check the Construction of the ACFirstClass Object
+        [Golden Output]
+        AC First Class
+        true
+        true
+        3
+    -> Check that the ACFirstClass Class is a Singleton Class
+    -> Check the output streaming operator which is a friend function of the ACFirstClass Class
+        [Expected Output]
+        AC First Class
+        Fare Load Factor: 3
+        Seat / Berth: Berth
+        AC: Yes
+        # of Tiers: 2
+        Luxury / Ordinary: Luxury
+
+7. class AC2Tier
+    -> Check the Construction of the AC2Tier Object
+        [Golden Output]
+        AC 2 Tier
+        true
+        false
+        2
+    -> Check that the AC2Tier Class is a Singleton Class
+    -> Check the output streaming operator which is a friend function of the AC2Tier Class
+        [Expected Output]
+        AC 2 Tier
+        Fare Load Factor: 2
+        Seat / Berth: Berth
+        AC: Yes
+        # of Tiers: 2
+        Luxury / Ordinary: Ordinary
+
+8. class FirstClass
+    -> Check the Construction of the FirstClass Object
+        [Golden Output]
+        First Class
+        false
+        true
+        2
+    -> Check that the FirstClass Class is a Singleton Class
+    -> Check the output streaming operator which is a friend function of the FirstClass Class
+        [Expected Output]
+        First Class
+        Fare Load Factor: 2
+        Seat / Berth: Berth
+        AC: No
+        # of Tiers: 2
+        Luxury / Ordinary: Luxury
+
+9. class AC3Tier
+    -> Check the Construction of the AC3Tier Object
+        [Golden Output]
+        AC 3 Tier
+        true
+        false
+        1.75
+    -> Check that the AC3Tier Class is a Singleton Class
+    -> Check the output streaming operator which is a friend function of the AC3Tier Class
+        [Expected Output]
+        AC 3 Tier
+        Fare Load Factor: 1.75
+        Seat / Berth: Berth
+        AC: Yes
+        # of Tiers: 3
+        Luxury / Ordinary: Ordinary
+
+10. class Sleeper
+    -> Check the Construction of the Sleeper Object
+        [Golden Output]
+        Sleeper
+        false
+        false
+        1
+    -> Check that the Sleeper Class is a Singleton Class
+    -> Check the output streaming operator which is a friend function of the Sleeper Class
+        [Expected Output]
+        Sleeper
+        Fare Load Factor: 1
+        Seat / Berth: Berth
+        AC: No
+        # of Tiers: 3
+        Luxury / Ordinary: Ordinary
+
+11. class Booking
+
+    -> Check the Construction of the Booking Object
+        [Golden Output]
+        Station("Mumbai")
+        Station("Delhi")
+        Date(1, 2, 2012)
+        ACFirstClass::Type()
+    -> Check the function ComputeFare of the Booking Class (which is called through the constructor)
+        [Golden Output]
+        2776
+    -> Check the PNR Allocation by the function ComputeFare of the Booking Class
+        [Golden Output]
+        1
+    -> Check the output streaming operator which is a friend function of the Booking Class
+        [Expected Output]
+        BOOKING SUCCEEDED
+        PNR Number = 1
+        From Station = Mumbai
+        To Station = Delhi
+        Travel Date = 1/Feb/2012
+        Travel Class = AC First Class
+        : Mode: Sleeping
+        : Comfort: AC
+        : Bunks: 2
+        : Luxury: Yes
+        Fare = 2776
+
+Application Testing (uses ApplicationTest.cpp and MyApplicationTest.cpp)
+-> Check the output for the final booking that involves the usage of all the classes.
+-> This was done for all sets of station, the total number being 5C2 = 10.
+-> The date was kept 1/Apr/2001
+-> The Booking Class was selected as ACFirstClass
+    [Expected Output]
+    BOOKING SUCCEEDED       
+    PNR Number = 1
+    From Station = Mumbai   
+    To Station = Bangalore  
+    Travel Date = 1/Apr/2001
+    Travel Class = AC First Class
+    : Mode: Sleeping
+    : Comfort: AC
+    : Bunks: 2
+    : Luxury: Yes
+    Fare = 1902
+
+    BOOKING SUCCEEDED
+    PNR Number = 2
+    From Station = Mumbai
+    To Station = Chennai
+    Travel Date = 1/Apr/2001
+    Travel Class = AC First Class
+    : Mode: Sleeping
+    : Comfort: AC
+    : Bunks: 2
+    : Luxury: Yes
+    Fare = 2571
+
+    BOOKING SUCCEEDED
+    PNR Number = 3
+    From Station = Mumbai
+    To Station = Delhi
+    Travel Date = 1/Apr/2001
+    Travel Class = AC First Class
+    : Mode: Sleeping
+    : Comfort: AC
+    : Bunks: 2
+    : Luxury: Yes
+    Fare = 2776
+
+    BOOKING SUCCEEDED
+    PNR Number = 4
+    From Station = Mumbai
+    To Station = Kolkata
+    Travel Date = 1/Apr/2001
+    Travel Class = AC First Class
+    : Mode: Sleeping
+    : Comfort: AC
+    : Bunks: 2
+    : Luxury: Yes
+    Fare = 3839
+
+    BOOKING SUCCEEDED
+    PNR Number = 5
+    From Station = Delhi
+    To Station = Bangalore
+    Travel Date = 1/Apr/2001
+    Travel Class = AC First Class
+    : Mode: Sleeping
+    : Comfort: AC
+    : Bunks: 2
+    : Luxury: Yes
+    Fare = 4094
+
+    BOOKING SUCCEEDED
+    PNR Number = 6
+    From Station = Delhi
+    To Station = Chennai
+    Travel Date = 1/Apr/2001
+    Travel Class = AC First Class
+    : Mode: Sleeping
+    : Comfort: AC
+    : Bunks: 2
+    : Luxury: Yes
+    Fare = 4150
+
+    BOOKING SUCCEEDED
+    PNR Number = 7
+    From Station = Delhi
+    To Station = Kolkata
+    Travel Date = 1/Apr/2001
+    Travel Class = AC First Class
+    : Mode: Sleeping
+    : Comfort: AC
+    : Bunks: 2
+    : Luxury: Yes
+    Fare = 2823
+
+    BOOKING SUCCEEDED
+    PNR Number = 8
+    From Station = Bangalore
+    To Station = Chennai
+    Travel Date = 1/Apr/2001
+    Travel Class = AC First Class
+    : Mode: Sleeping
+    : Comfort: AC
+    : Bunks: 2
+    : Luxury: Yes
+    Fare = 719
+
+    BOOKING SUCCEEDED
+    PNR Number = 9
+    From Station = Bangalore
+    To Station = Kolkata
+    Travel Date = 1/Apr/2001
+    Travel Class = AC First Class
+    : Mode: Sleeping
+    : Comfort: AC
+    : Bunks: 2
+    : Luxury: Yes
+    Fare = 3571
+
+    BOOKING SUCCEEDED
+    PNR Number = 10
+    From Station = Chennai
+    To Station = Kolkata
+    Travel Date = 1/Apr/2001
+    Travel Class = AC First Class
+    : Mode: Sleeping
+    : Comfort: AC
+    : Bunks: 2
+    : Luxury: Yes
+    Fare = 3173
+
+    Number of Bookings done: 10

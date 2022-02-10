@@ -1,0 +1,172 @@
+<SINGLE LINE COMMENT, //testing keywords >
+<KEYWORD, auto >
+<KEYWORD, enum >
+<KEYWORD, restrict >
+<KEYWORD, unsigned >
+<KEYWORD, break >
+<KEYWORD, extern >
+<KEYWORD, return >
+<KEYWORD, void >
+<KEYWORD, case >
+<KEYWORD, float >
+<KEYWORD, short >
+<KEYWORD, volatile >
+<KEYWORD, char >
+<KEYWORD, for >
+<KEYWORD, signed >
+<KEYWORD, while >
+<KEYWORD, const >
+<KEYWORD, goto >
+<KEYWORD, sizeof >
+<KEYWORD, _Bool >
+<KEYWORD, continue >
+<KEYWORD, if >
+<KEYWORD, static >
+<KEYWORD, _Complex >
+<KEYWORD, default >
+<KEYWORD, inline >
+<KEYWORD, struct >
+<KEYWORD, _Imaginary >
+<KEYWORD, do >
+<KEYWORD, int >
+<KEYWORD, switch >
+<KEYWORD, double >
+<KEYWORD, long >
+<KEYWORD, typedef >
+<KEYWORD, else >
+<KEYWORD, register >
+<KEYWORD, union >
+<SINGLE LINE COMMENT, //testing identifier >
+<IDENTIFIER, a >
+<IDENTIFIER, b2 >
+<IDENTIFIER, A_b1i >
+<SINGLE LINE COMMENT, //constants >
+<KEYWORD, int >
+<IDENTIFIER, x >
+<PUNCTUATOR, = >
+<INTEGER CONSTANT, 10 >
+<PUNCTUATOR, ; >
+<KEYWORD, float >
+<IDENTIFIER, y >
+<PUNCTUATOR, = >
+<FLOATING POINT CONSTANT, 5.9 >
+<PUNCTUATOR, ; >
+<KEYWORD, float >
+<IDENTIFIER, z >
+<PUNCTUATOR, = >
+<FLOATING POINT CONSTANT, 10e7 >
+<PUNCTUATOR, ; >
+<KEYWORD, float >
+<IDENTIFIER, w >
+<PUNCTUATOR, = >
+<FLOATING POINT CONSTANT, 22.0 >
+<PUNCTUATOR, / >
+<INTEGER CONSTANT, 7 >
+<PUNCTUATOR, ; >
+<KEYWORD, char >
+<IDENTIFIER, c >
+<PUNCTUATOR, = >
+<CHARACTER CONSTANT, 'AB' >
+<PUNCTUATOR, ; >
+<KEYWORD, enum >
+<IDENTIFIER, week >
+<PUNCTUATOR, { >
+<IDENTIFIER, Mon >
+<PUNCTUATOR, , >
+<IDENTIFIER, Tue >
+<PUNCTUATOR, , >
+<IDENTIFIER, Wed >
+<PUNCTUATOR, } >
+<PUNCTUATOR, ; >
+<KEYWORD, enum >
+<IDENTIFIER, week2 >
+<PUNCTUATOR, { >
+<IDENTIFIER, Mon >
+<PUNCTUATOR, = >
+<INTEGER CONSTANT, 5 >
+<PUNCTUATOR, , >
+<IDENTIFIER, Tue >
+<PUNCTUATOR, , >
+<IDENTIFIER, Wed >
+<PUNCTUATOR, } >
+<PUNCTUATOR, ; >
+<SINGLE LINE COMMENT, //escape sequences >
+<ESCAPE SEQUENCE, \' >
+<ESCAPE SEQUENCE, \' >
+undefined lexeme : '
+<ESCAPE SEQUENCE, \? >
+<ESCAPE SEQUENCE, \\ >
+<ESCAPE SEQUENCE, \a >
+<ESCAPE SEQUENCE, \b >
+<ESCAPE SEQUENCE, \f >
+<ESCAPE SEQUENCE, \n >
+<ESCAPE SEQUENCE, \r >
+<ESCAPE SEQUENCE, \t >
+<ESCAPE SEQUENCE, \v >
+<SINGLE LINE COMMENT, //string literal >
+<KEYWORD, char >
+<IDENTIFIER, s >
+<PUNCTUATOR, [ >
+<PUNCTUATOR, ] >
+<PUNCTUATOR, = >
+<STRING_LITERAL, "string literal" >
+<SINGLE LINE COMMENT, //a simple code block to test punctuator >
+<KEYWORD, for >
+<PUNCTUATOR, ( >
+<KEYWORD, int >
+<IDENTIFIER, i >
+<PUNCTUATOR, = >
+<INTEGER CONSTANT, 0 >
+<PUNCTUATOR, ; >
+<IDENTIFIER, i >
+<PUNCTUATOR, < >
+<IDENTIFIER, n >
+<PUNCTUATOR, ; >
+<IDENTIFIER, i >
+<PUNCTUATOR, ++ >
+<PUNCTUATOR, ) >
+<PUNCTUATOR, { >
+<KEYWORD, int >
+<IDENTIFIER, arr >
+<PUNCTUATOR, [ >
+<INTEGER CONSTANT, 10 >
+<PUNCTUATOR, ] >
+<PUNCTUATOR, ; >
+<KEYWORD, while >
+<PUNCTUATOR, ( >
+<IDENTIFIER, i >
+<PUNCTUATOR, -- >
+<PUNCTUATOR, ) >
+<PUNCTUATOR, { >
+<IDENTIFIER, arr >
+<PUNCTUATOR, [ >
+<IDENTIFIER, i >
+<PUNCTUATOR, ] >
+<PUNCTUATOR, %= >
+<INTEGER CONSTANT, 2 >
+<PUNCTUATOR, ; >
+<IDENTIFIER, arr >
+<PUNCTUATOR, [ >
+<IDENTIFIER, i >
+<PUNCTUATOR, ] >
+<PUNCTUATOR, <<= >
+<INTEGER CONSTANT, 1 >
+<PUNCTUATOR, ; >
+<IDENTIFIER, z >
+<PUNCTUATOR, = >
+<IDENTIFIER, x >
+<PUNCTUATOR, - >
+<IDENTIFIER, y >
+<PUNCTUATOR, ; >
+<PUNCTUATOR, } >
+<PUNCTUATOR, } >
+<PUNCTUATOR, # >
+<IDENTIFIER, define >
+<IDENTIFIER, ab >
+<PUNCTUATOR, - >
+<INTEGER CONSTANT, 12 >
+<SINGLE LINE COMMENT, //single line comment >
+<MULTIPLE LINE COMMENT STARTS, /* >
+ multiple *line
+comment
+<MULTIPLE LINE COMMENT ENDS, */ >

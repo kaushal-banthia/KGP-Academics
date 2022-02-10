@@ -1,0 +1,8 @@
+MD5 hash of Video1.mp4:
+177ac4e73c88cb9277b58fd0c975f336
+
+MD5 hash of Video2.mp4:
+1d50732aae9e81e5995c41a0f77847a0
+
+MD5 hash of Video3.mp4:
+fc1582c6a6b8a7d0094e5f0dbb261c97

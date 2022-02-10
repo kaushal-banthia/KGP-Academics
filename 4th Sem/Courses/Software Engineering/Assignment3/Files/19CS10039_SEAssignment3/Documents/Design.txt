@@ -1,0 +1,401 @@
+Name: Kaushal Banthia
+Roll Number: 19CS10039
+
+This program contains the following classes
+
+1. Class Station
+    Data Members:
+        Private:
+            -> string name_: This is constant because the name of the station once declared, will never 
+                        change.
+    Constructors & Destructors:
+        Private:
+            -> Copy Assignment Operator: This is blocked (made private), since it is not required.
+        Public:
+            -> Constructor
+            -> Copy Constructor
+            -> Destructor
+
+    Functions:
+        Public:
+            -> GetName(): Inline Function that returns the name of the station. It is a constant Function, 
+                        because it does not intend to change the state of the recieved Station Object. 
+                        It works only as a Getter Function.
+            -> GetDistance(): This Function returns the distance between 2 stations. It is a constant 
+                        Function, because it does not intend to change the state of the recieved Station 
+                        Object.
+            -> operator<<(): This is an overloaded output streaming operator, which has been made as a 
+                        friend of this class.
+            -> UnitTestStation(): This function is used to Unit Test the Station Class. It is made static 
+                        so that it can be called without declaring any object of the Class.
+
+2. Class Railways
+    Data Members:
+        Private:
+            -> vector<string> sStations: This is constant because the vector of the stations, once declared 
+                        will never change. This is also static because, the same instance of this vector
+                        should be shared with all instances of the Class.
+            -> map<vector<string>, int> sDistStations: This is static since the map of stations and their
+                        mutual distances should be shared with all instances of the Class.
+    Constructors:
+        Private:
+            -> Constructor: This is blocked (made private), because we need to restrict outside access to
+                        it, since we need a singleton class.
+            -> Copy Constructor: This is blocked (made private), since it is not required.
+            -> Copy Assignment Operator: This is blocked (made private), since it is not required.
+
+    Functions:
+        Public:
+            -> IndianRailways(): A static function that can declare the single object of the Class using
+                        its Constructor. Using this function to instantiate the class ensures that it 
+                        remains Singleton.
+            -> GetDistance(): This Function returns the distance between 2 stations. It is a constant 
+                        Function, because it does not intend to change the state of the recieved Station 
+                        Object.
+            -> operator<<(): This is an overloaded output streaming operator, which has been made as a 
+                        friend of this class.
+            -> UnitTestRailways(): This function is used to Unit Test the Railways Class. It is made 
+                        static so that it can be called without declaring any object of the Class.
+
+3. Class Date
+    Data Members:
+        Private:
+            -> vector<string> sMonthName: This is constant because the vector of the months once declared 
+                        will never change. This is also static because, the same instance of this vector
+                        should be shared with all instances of the Class.
+            -> int d_: This stores the day of the Date. This is constant because the day, once declared 
+                        will never change.
+            -> int m_: This stores the month of the Date. This is constant because the day, once declared 
+                        will never change.
+            -> int y_: This stores the year of the Date. This is constant because the day, once declared 
+                        will never change.
+            -> string date_: This stores the formatted date as a string. This is constant because the 
+                        date, once declared will never change.
+    Constructors & Destructors:
+        Private:
+            -> Copy Assignment Operator: This is blocked (made private), since it is not required.
+        Public:
+            -> Constructor
+            -> Copy Constructor
+            -> Destructor
+
+    Functions:
+        Public:
+            -> GetDay(): Inline Function that returns the day of the date. It is a constant Function, 
+                        because it does not intend to change the state of the recieved Date Object. 
+                        It works only as a Getter Function.
+            -> GetMonth(): Inline Function that returns the month of the date. It is a constant Function, 
+                        because it does not intend to change the state of the recieved Date Object. 
+                        It works only as a Getter Function.
+            -> GetMonth(): Inline Function that returns the year of the date. It is a constant Function, 
+                        because it does not intend to change the state of the recieved Date Object. 
+                        It works only as a Getter Function.
+            -> operator<<(): This is an overloaded output streaming operator, which has been made as a 
+                        friend of this class.
+            -> UnitTestDate(): This function is used to Unit Test the Date Class. It is made static 
+                        so that it can be called without declaring any object of the Class.
+
+4. Class Passenger
+    Data Members:
+        Protected:
+            -> string name_: This is constant because the Name of the Passenger once declared will never 
+                        change.
+            -> long long aadharNumber_: This is constant because the Aadhar Number of the Passenger once 
+                        declared will never change.
+            -> Date dateOfBirth_: This is constant because the Date of Birth of the Passenger once 
+                        declared will never change.
+            -> string gender_: This is constant because the Gender of the Passenger once declared will 
+                        never change.
+            -> long long mobileNumber_: This is constant because the Mobile Number of the Passenger once 
+                        declared will never change.
+            -> string category_: This is constant because the Category of the Passenger once 
+                        declared will never change.
+    Constructors & Destructors:
+        Private:
+            -> Copy Assignment Operator: This is blocked (made private), since it is not required
+        Public:
+            -> Constructor
+            -> Copy Constructor
+            -> Destructor: This is a virtual Destructor, since we intend to make the Passenger Class
+                        polymorphic in the future.
+
+    Functions:
+        Public:
+            -> GetName(): Inline Function that returns the name of the Passenger. It is a constant 
+                        Function, because it does not intend to change the state of the recieved Passenger
+                        Object. It works only as a Getter Function.
+            -> long long GetAadharNumber(): Inline Function that returns the Aadhar Number of the 
+                        Passenger. It is a constant Function, because it does not intend to change the 
+                        state of the recieved Passenger Object. It works only as a Getter Function.
+            -> Date GetDate(): Inline Function that returns the Date of Birth of the Passenger. It is a 
+                        constant Function, because it does not intend to change the state of the recieved 
+                        Passenger Object. It works only as a Getter Function.
+            -> string GetGender(): Inline Function that returns the Gender of the Passenger. It is a 
+                        constant Function, because it does not intend to change the state of the recieved 
+                        Passenger Object. It works only as a Getter Function.
+            -> long long GetMobileNumber(): Inline Function that returns the Mobile Number of the 
+                        Passenger. It is a constant Function, because it does not intend to change the 
+                        state of the recieved Passenger Object. It works only as a Getter Function.
+            -> string GetCategory(): Inline Function that returns the Categor of the Passenger. It is a 
+                        constant Function, because it does not intend to change the state of the 
+                        recieved Passenger Object. It works only as a Getter Function.
+                        This function is made virtual, since we intend to make the Passenger Class
+                        polymorphic in future based on the category of the Passenger.
+            -> operator<<(): This is an overloaded output streaming operator, which has been made as a 
+                        friend of this class.
+
+5. Class BookingClasses
+    Data Members:
+        Protected:
+            ->float loadFactor_: This is constant because the Fare Load Factor of the Booking Class once 
+                        declared, will never change.
+            ->string name_: This is constant because the Name of the Booking Class once declared, will 
+                        never change.
+            ->bool isAC_: This is constant because once it is decided that Booking Class will be AC or 
+                        non-AC, it will not change in the program.
+            ->bool isLuxury_: This is constant because once it is decided that Booking Class will be 
+                        luxury or ordinary,it will not change in the program.
+            ->bool isSitting_: Keeps record if the Booking Class is Sitting or Sleeping. Value is assigned
+                        in the derived classes.
+            ->int numTiers_: Number of Tier in the Booking Class. Value is assigned in the derived classes.
+    Constructors & Destructors:
+        Private:
+            -> Copy Assignment Operator: This is blocked (made private), since it is not required.
+        Protected:
+            -> Constructor
+            -> Copy Constructor
+            -> Destructor: This is a virtual Destructor, since BookingClasses is polymorphic.
+
+    Functions:
+        Public:
+            -> IsSitting(): This is a Pure Virtual Function, that determining if the Booking Class is sitting 
+                        or sleeping. It is a constant Function, because it does not intend to change the 
+                        state of the recieved BookingClasses Object.
+            -> GetNumberOfTiers(): This is a Pure Virtual Function, that returns the number number of tiers
+                        in the BookingClass. It is a constant Function, because it does not intend to 
+                        change the state of the recieved BookingClasses Object. It works only as a Getter
+                        Function.
+            -> GetLoadFactor(): Inline Function that returns the Fare Load Factor of the Booking Class.
+                        It is a constant Function, because it does not intend to change the state of the
+                        recieved BookingClasses Object. It works only as a Getter Function.
+            -> GetName(): Inline Function that returns the Name of the Booking Class. It is a constant 
+                        Function, because it does not intend to change the state of the recieved 
+                        BookingClasses Object. It works only as a Getter Function.
+            -> IsAC(): Inline Function that tells whether the Booking Class has AC or not.It is a constant 
+                        Function, because it does not intend to change the state of the recieved 
+                        BookingClasses Object.
+            -> IsLuxury(): Inline Function that tells whether the Booking Class is luxury or ordinary.
+                        It is a constant Function, because it does not intend to change the state of the
+                        recieved BookingClasses Object.
+            -> operator<<(): This is an overloaded output streaming operator, which has been made as a 
+                        friend of this class.
+
+6. class Berth (Derived from BookingClasses) (For those BookingClasses that have Berths)
+    Data Members:
+            -> Those in BookingClasses
+    Constructors & Destructors:
+        Protected:
+            -> Constructor
+            -> Destructor
+
+    Functions:
+        Public:
+            -> Those in BookingClasses
+            -> IsSitting(): This Function is defined here to remove the purity of the Pure Virtual 
+                        Function of the base class. It is an inline function that determines if the 
+                        Booking Class is sitting or sleeping. It is a constant Function, because it does 
+                        not intend to change the state of the recieved BookingClasses Object.
+
+7. class Seat (Derived from BookingClasses) (For those BookingClasses that have Seats(numTiers_ = 0))
+    Data Members:
+            -> Those in BookingClasses
+    Constructors & Destructors:
+        Protected:
+            -> Constructor
+            -> Destructor
+
+    Functions:
+        Public:
+            -> Those in BookingClasses
+            -> IsSitting(): This Function is defined here to remove the purity of the Pure Virtual 
+                        Function of the base class. It is an inline function that determines if the 
+                        Booking Class is sitting or sleeping. It is a constant Function, because it does 
+                        not intend to change the state of the recieved BookingClasses Object.
+            -> GetNumberOfTiers(): This Function is defined here to remove the purity of the Pure Virtual 
+                        Function of the base class. It is an inline function that returns the number 
+                        number of tiers in the BookingClass. It is a constant Function, because it does 
+                        not intend to change the state of the recieved BookingClasses Object. It works
+                        only as a Getter Function.
+
+8. class SecondTier (Derived from Berth) (For those BookingClasses that have 2 Tiers(numTiers_ = 2))
+    Data Members:
+            -> Those in Berth
+    Constructors & Destructors:
+        Protected:
+            -> Constructor
+            -> Destructor
+
+    Functions:
+        Public:
+            -> Those in Berth
+            -> GetNumberOfTiers(): This Function is defined here to remove the purity of the Pure Virtual 
+                        Function of the base class. It is an inline function that returns the number 
+                        number of tiers in the BookingClass. It is a constant Function, because it does 
+                        not intend to change the state of the recieved BookingClasses Object. It works
+                        only as a Getter Function.
+
+9. class ThirdTier (Derived from Berth) (For those BookingClasses that have 3 Tiers(numTiers_ = 3))
+    This class is exactly the same as class SecondTier, with one exception that this class makes the value
+    of numTiers_ = 3, whereas class SecondTier makes the value of numTiers_ = 2.
+
+10. class ACChairCar and class SecondSitting (Derived from Seat)
+    Both these classes are similar, with the exception that the values of sName, sIsAC, sIsLuxury and
+    sLoadFactor have been initialised differenly in both these classes
+    Data Members:
+            -> Those in Seat
+        Private:
+            -> string sName: This is constant because the name of the class once declared, will never 
+                        change. This is also static because, the same instance of this variable
+                        should be shared with all instances of the Class.
+            -> bool sIsAC: This is constant because once it is decided that Booking Class will be AC or 
+                        non-AC, it will not change in the program. This is also static because, the same
+                        instance of this variable should be shared with all instances of the Class.
+            -> bool sIsLuxury: This is constant because once it is decided that Booking Class will be 
+                        luxury or ordinary,it will not change in the program. This is also static because,
+                        the same instance of this variable should be shared with all instances of the Class.
+            -> float sLoadFactor: This is constant because the Fare Load Factor of the Booking Class once 
+                        declared, will never change. This is also static because, the same instance of
+                        this variable should be shared with all instances of the Class.
+    Constructors & Destructors:
+        Private:
+            -> Constructor: This is blocked (made private), because we need to restrict outside access to
+                        it, since we need a singleton class.
+            -> Destructor
+
+    Functions:
+        Public:
+            -> Those in Seat
+            -> Type(): A static function that can declare the single object of the Class using
+                        its Constructor. Using this function to instantiate the class ensures that it 
+                        remains Singleton.
+            -> Unit Test Function: This function is used to Unit Test the Class. It is made 
+                        static so that it can be called without declaring any object of the Class.
+
+11. class ACFirstClass, class AC2Tier and class FirstClass (Derived from SecondTier)
+    All three of these classes are similar, with the exception that the values of sName, sIsAC, sIsLuxury
+    and sLoadFactor have been initialised differenly in both these classes
+    Data Members:
+            -> Those in SecondTier
+        Private:
+            -> string sName: This is constant because the name of the class once declared, will never 
+                        change. This is also static because, the same instance of this variable
+                        should be shared with all instances of the Class.
+            -> bool sIsAC: This is constant because once it is decided that Booking Class will be AC or 
+                        non-AC, it will not change in the program. This is also static because, the same
+                        instance of this variable should be shared with all instances of the Class.
+            -> bool sIsLuxury: This is constant because once it is decided that Booking Class will be 
+                        luxury or ordinary,it will not change in the program. This is also static because,
+                        the same instance of this variable should be shared with all instances of the Class.
+            -> float sLoadFactor: This is constant because the Fare Load Factor of the Booking Class once 
+                        declared, will never change. This is also static because, the same instance of
+                        this variable should be shared with all instances of the Class.
+    Constructors & Destructors:
+        Private:
+            -> Constructor: This is blocked (made private), because we need to restrict outside access to
+                        it, since we need a singleton class.
+            -> Destructor
+
+    Functions:
+        Public:
+            -> Those in SecondTier
+            -> Type(): A static function that can declare the single object of the Class using
+                        its Constructor. Using this function to instantiate the class ensures that it 
+                        remains Singleton.
+            -> Unit Test Function: This function is used to Unit Test the Class. It is made 
+                        static so that it can be called without declaring any object of the Class.
+
+11. class AC3Tier and class Sleeper (Derived from ThirdTier)
+    Both of these classes are similar, with the exception that the values of sName, sIsAC, sIsLuxury
+    and sLoadFactor have been initialised differenly in both these classes
+    Data Members:
+            -> Those in ThirdTier
+        Private:
+            -> string sName: This is constant because the name of the class once declared, will never 
+                        change. This is also static because, the same instance of this variable
+                        should be shared with all instances of the Class.
+            -> bool sIsAC: This is constant because once it is decided that Booking Class will be AC or 
+                        non-AC, it will not change in the program. This is also static because, the same
+                        instance of this variable should be shared with all instances of the Class.
+            -> bool sIsLuxury: This is constant because once it is decided that Booking Class will be 
+                        luxury or ordinary,it will not change in the program. This is also static because,
+                        the same instance of this variable should be shared with all instances of the Class.
+            -> float sLoadFactor: This is constant because the Fare Load Factor of the Booking Class once 
+                        declared, will never change. This is also static because, the same instance of
+                        this variable should be shared with all instances of the Class.
+    Constructors & Destructors:
+        Private:
+            -> Constructor: This is blocked (made private), because we need to restrict outside access to
+                        it, since we need a singleton class.
+            -> Destructor
+
+    Functions:
+        Public:
+            -> Those in SecondTier
+            -> Type(): A static function that can declare the single object of the Class using
+                        its Constructor. Using this function to instantiate the class ensures that it 
+                        remains Singleton.
+            -> Unit Test Function: This function is used to Unit Test the Class. It is made 
+                        static so that it can be called without declaring any object of the Class.
+
+12. class Booking
+    Data Members:
+        Private:
+            ->float sBaseFarePerKM: This is constant because the Base Fare Per KM of the class, once
+                        declared, will not change in the program. This is also static because, the same
+                        instance of this variable should be shared with all instances of the Class.
+            ->float sACSurcharge: This is constant because the AC Surcharge of the class, once
+                        declared, will not change in the program. This is also static because, the same
+                        instance of this variable should be shared with all instances of the Class.
+            ->float sLuxuryTaxPercent: This is constant because the Luxury Tax Percent of the class, once
+                        declared, will not change in the program. This is also static because, the same
+                        instance of this variable should be shared with all instances of the Class.
+            -> int sBookingPNRSerial: This is also static because, the same instance of this variable
+                        should be shared with all instances of the Class, so that we can allot PNR to
+                        Passengers, without the use of a global variable.
+            -> Station &fromStation_: This is a constant reference to the source Station. It is constant because
+                        once declared, it will not change for that Booking.
+            -> Station &toStation_: This is a constant reference to the destination Station. It is constant
+                        because once declared, it will not change for that Booking.
+            -> Date &date_: This is a constant reference to the Date of the Booking. It is constant because
+                        once declared, it will not change for that Booking.
+            -> BookingClasses &bookingClass_: This is a constant reference to the Booking Class of the
+                        Booking. It is constant because once declared, it will not change for that Booking.
+            -> Passenger *passenger_: This is a constant reference to the Passenger. It is constant because
+                        once declared, it will not change for that Booking.
+            -> float fare_: This variable holds the value of the calculated fare for the Booking, which
+                        is calculated using the provided Business Logic.
+            -> int PNR_: This variable holds the value of the allocated PNR to the Passenger for the Booking.
+            -> bool bookingStatus_: This varible contains the status of the Booking. For now, it holds
+                        true, meaning that the Booking is successful.
+            -> string bookingMessage_: This variable contains the Message to be displayed upon Booking.
+                        For now, it holds "BOOKING SUCCEEDED", meaning that the Booking is successful.
+        Public:
+            -> vector<Booking*> sBookings: Variable that contains a vector that holds pointers to all the
+                        previous Bookings that had been made.    
+            
+    Constructors & Destructors:
+        Private:
+            -> Copy Assignment Operator: This is blocked (made private), since it is not required.
+        Public:
+            -> Constructor
+            -> Destructor
+
+    Functions:
+        Public:
+            -> ComputeFare(): This function calculates the fare for the Booking using the Business Logic
+                            provided. This is a virtual fucntion, since we since we intend to make 
+                            this Class polymorphic in the future.
+            -> operator<<(): This is an overloaded output streaming operator, which has been made as a 
+                        friend of this class.
+            -> Unit Test Function: This function is used to Unit Test the Class. It is made 
+                        static so that it can be called without declaring any object of the Class.

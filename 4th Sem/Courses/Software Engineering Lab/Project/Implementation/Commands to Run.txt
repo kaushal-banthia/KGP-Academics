@@ -1,0 +1,10 @@
+pip install -r requirements.txt
+cd supermarket
+py manage.py makemigrations
+py manage.py migrate
+py manage.py runserver
+
+(This line is a comment) (The below lines are for testing)
+py manage.py test
+python manage.py test -v 3 --testrunner automate_testing.HtmlTestReporter
+(This line is a comment) (The report gets saved in a folder named reports)
